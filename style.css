@@ -14,6 +14,8 @@
     --eletric-blue: #0096C7;
     --mint-tulip: #CAF0F8;
     --dark-blue: #03045E;
+    --french-blue: #0077B6;
+    --bright-cerulean: #00B4D8;
 }
 
 body {
@@ -72,13 +74,44 @@ main {
         }
     }
 
+    .input-box:has(input:focus) {
+        outline: 2px solid var(--bright-cerulean);
+    }
+
     .tip > div {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1.6rem;
+        margin-top: 1rem;
+
+        button {
+            border: none;
+            background: var(--dark-blue);
+            color: var(--white);
+            font-size: 2.4rem;
+            border-radius: .5rem;
+            padding-block: .6rem;
+            font-weight: 700;
+        }
 
         input {
             width: 100%;
+            background: var(--mint-tulip);
+            font-size: 2.4rem;
+            text-align: center;
+            border: none;
+            border-radius: .5rem;
+            outline: none;
+            font-weight: 700;
+            color: var(--dark-blue);
+            
+            &::placeholder {
+                color: var(--french-blue);
+            }
+
+            &:focus {
+                outline: 2px solid var(--bright-cerulean);
+            }
         }
     }
 }
